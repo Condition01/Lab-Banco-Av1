@@ -29,18 +29,19 @@ public class JogosDaoImpl implements JogosDao{
 
 	public List<Jogos> trazerRodada(Connection con) throws DAOException, SQLException {
 		List<Jogos> listaJogos = new ArrayList<Jogos>();
-		String sql = "select * from jogos";
+		String sql = "select t.nome as nome1, t2.nome as nome2, j.golsTimeA, j.golsTimeB, "
+				+ "convert(varchar(10),j.dataJogo,103) as dataJogo from jogos j inner join times t "
+				+ "on j.codTimeA = t.id inner join times2 t2 on t2.id = j.codTimeB";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.execute();
 		ResultSet rs = ps.getResultSet();
 		while(rs.next()) {
 			Jogos j = new Jogos();
-			j.setId(rs.getInt("id"));
-			j.setCodTimeA(rs.getInt("codTimeA"));
-			j.setCodTimeB(rs.getInt("codTimeB"));
+			j.setNomeTimeA(rs.getString("nome1"));
+			j.setNomeTimeB(rs.getString("nome2"));
 			j.setGolsTimeA(rs.getInt("golsTimeA"));
 			j.setGolsTimeB(rs.getInt("golsTimeB"));
-			j.setDataJogo(rs.getDate("dataJogo"));
+			j.setDataJogo(rs.getString("dataJogo"));
 			listaJogos.add(j);
 		}
 		ps.close();

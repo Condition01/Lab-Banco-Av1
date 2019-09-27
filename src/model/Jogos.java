@@ -3,31 +3,13 @@ package model;
 import java.util.Date;
 
 public class Jogos {
-	private int id;
-	private int codTimeA;
-	private int codTimeB;
+
+	private String nomeTimeA;
+	private String nomeTimeB;
 	private int golsTimeA;
 	private int golsTimeB;
-	private Date dataJogo;
-	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public int getCodTimeA() {
-		return codTimeA;
-	}
-	public void setCodTimeA(int codTimeA) {
-		this.codTimeA = codTimeA;
-	}
-	public int getCodTimeB() {
-		return codTimeB;
-	}
-	public void setCodTimeB(int codTimeB) {
-		this.codTimeB = codTimeB;
-	}
+	private String dataJogo;
+
 	public int getGolsTimeA() {
 		return golsTimeA;
 	}
@@ -40,12 +22,23 @@ public class Jogos {
 	public void setGolsTimeB(int golsTimeB) {
 		this.golsTimeB = golsTimeB;
 	}
-	public Date getDataJogo() {
+	public String getNomeTimeA() {
+		return nomeTimeA;
+	}
+	public void setNomeTimeA(String nomeTimeA) {
+		this.nomeTimeA = nomeTimeA;
+	}
+	public String getNomeTimeB() {
+		return nomeTimeB;
+	}
+	public void setNomeTimeB(String nomeTimeB) {
+		this.nomeTimeB = nomeTimeB;
+	}
+	public String getDataJogo() {
 		return dataJogo;
 	}
-	public void setDataJogo(Date dataJogo) {
+	public void setDataJogo(String dataJogo) {
 		this.dataJogo = dataJogo;
-	}
-	
+	}	
 	
 }

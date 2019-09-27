@@ -39,7 +39,7 @@ public class GrupoDaoImpl implements GrupoDao{
 	
 	public List<Grupos> pegarGrupos(Connection con) throws SQLException {
 		List<Grupos> listaGrupo = new ArrayList<Grupos>();
-		String sql = "select * from grupos";
+		String sql = "select * from grupos order by grupo";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.execute();
 		ResultSet rs = ps.getResultSet();
