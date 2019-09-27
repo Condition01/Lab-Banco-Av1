@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=US-ASCII" pageEncoding="US-ASCII"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.Date, java.text.SimpleDateFormat" %>
 <%@ page import = "java.util.ArrayList"%>
 <%@ page import = "java.util.List"%>
@@ -6,46 +7,48 @@
 <%@ page import = "controller.GerarGrupos"%>
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
-<title>Gerar Grupos</title>
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+	<meta charset="ISO-8859-1">
+	<title>Gerar Grupos</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+	<style type="text/css">
+		h1{
+			text-align: center;
+		}
+		form{
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		
+	</style>
 </head>
 <body>
-<h3>Clique no Botao para gerar os Grupos</h3>
+	<h1>Clique no Botao para gerar os Grupos</h1>
 <br/>
 	<%
 		List<Grupos> lg = (List<Grupos>) session.getAttribute("LISTA2");
 	%>
 	
 	<form action="./gerarGrupos" method="post">
-		<button type="submit"  
-			class="btn btn-danger" aria-label="Left Align" name="s">
-  			Gerar Grupos
-		</button>
+		<button type="submit" name="s" value="gerar" class="btn btn-primary" style="width: 300px">Gerar Grupos</button>
 	</form>
-	
-	
 	
 	<% if(lg != null && lg.size() > 0)  {%>
 		<div class="container">
 		<table class="table table-striped">
 			<thead class="thead-dark">
 				<tr>
-					<th>Grupo  </th>
-					<th>codTime</th>
+					<th>Grupo</th>
+					<th>Time</th>
 				</tr>
 			</thead>
 			<tbody>
 				<% for (Grupos b: lg) { %>
 					<tr>
 						<td><%=b.getGrupo()%></td>
-						<td><%=b.getCodTime()%></td>
+						<td><%=b.getNome()%></td>
 					</tr>
 			</tbody>
 			<%}%>
@@ -54,7 +57,7 @@
 	<%}
 	session.removeAttribute("LISTA2");
 	%>
-	
-	
+
+
 </body>
 </html>

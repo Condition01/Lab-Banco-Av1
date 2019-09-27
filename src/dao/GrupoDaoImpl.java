@@ -10,8 +10,6 @@ import java.util.List;
 
 import model.Grupos;
 
-
-
 /*	String sql = "{CALL sp_insereproduto(?,?)}";
 		CallableStatement cs = c.prepareCall(sql);
 		cs.setString(1, p.getNome());
@@ -39,14 +37,14 @@ public class GrupoDaoImpl implements GrupoDao{
 	
 	public List<Grupos> pegarGrupos(Connection con) throws SQLException {
 		List<Grupos> listaGrupo = new ArrayList<Grupos>();
-		String sql = "select * from grupos order by grupo";
+		String sql = "select t.nome as nome, g.grupo as grupo from grupos g inner join times t on t.id = g.codTime order by g.grupo";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.execute();
 		ResultSet rs = ps.getResultSet();
 		while(rs.next()) {
 			Grupos g = new Grupos();
+			g.setNome(rs.getString("nome"));
 			g.setGrupo(rs.getString("grupo"));
-			g.setCodTime(rs.getInt("codTime"));
 			listaGrupo.add(g);
 		}
 		ps.close();

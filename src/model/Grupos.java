@@ -3,7 +3,7 @@ package model;
 public class Grupos {
 	
 	private String grupo;
-	private int codTime;
+	private String nome;
 	
 	public String getGrupo() {
 		return grupo;
@@ -11,12 +11,11 @@ public class Grupos {
 	public void setGrupo(String grupo) {
 		this.grupo = grupo;
 	}
-	public int getCodTime() {
-		return codTime;
+	public String getNome() {
+		return nome;
 	}
-	public void setCodTime(int codTime) {
-		this.codTime = codTime;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-	
-	
+
 }
