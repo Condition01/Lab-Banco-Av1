@@ -31,7 +31,6 @@
 		}
 		h1{
 			padding-top: 1%;
-			
 		}
 
 		@media only screen and (max-width: 600px) {
@@ -57,6 +56,14 @@
 				<a href="telajogos.jsp"><img src="./imagens/SortearJogos.png"></a>
 			</div>
 		</div>	
+		<div class="row">
+			<div class="d-flex flex-column col-sm-6">
+				<a href="telagols.jsp">Gerar Gols</a>
+			</div>
+			<div class="d-flex flex-column col-sm-6">
+				<a href="telagols.jsp">Ver Campeonato</a>				
+			</div>
+		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

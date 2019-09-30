@@ -39,7 +39,6 @@ public class GerarJogos extends HttpServlet{
 		HttpSession session = req.getSession();
 		session.setAttribute("LISTA", listaFiltrada);
 		
-		
 		try {
 			resp.sendRedirect("./telajogos.jsp");
 		} catch (IOException e) {
