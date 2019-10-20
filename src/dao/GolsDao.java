@@ -6,4 +6,5 @@ import model.Jogos;
 
 public interface GolsDao {
 	List<Jogos> gerarGols(String value);
+	List<Jogos> gerarGolsCompleto();
 }

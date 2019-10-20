@@ -42,8 +42,6 @@ public class GerarGrupos extends HttpServlet{
 		} catch (DAOException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-				
-		
 		}
 		
 		try {
