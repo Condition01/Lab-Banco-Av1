@@ -34,6 +34,7 @@ public class PegarResultadosGrupos extends HttpServlet {
 		try {
 			listaResultado = rDao.getResultadoGrupo();
 			listaResultadoR = rDao.getResultadoRebaixado();
+			int valor = 5;
 			verificaRebaixado();
 			HttpSession session = request.getSession();
 			session.setAttribute("LISTARESULTADOG", listaResultado);

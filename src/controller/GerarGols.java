@@ -26,7 +26,7 @@ public class GerarGols extends HttpServlet {
 		
 		String value = req.getParameter("gols");
 		GolsDao gDao = new GolsDaoImpls();
-
+		System.out.println(value);
 		if (value.equals("todos")) {
 			System.out.println("Caiu aqui!");
 			jogos = gDao.gerarGolsCompleto();

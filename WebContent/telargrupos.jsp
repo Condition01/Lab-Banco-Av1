@@ -41,6 +41,8 @@ nav {
 <body>
 	<%
 		List<Resultado> listaResultado = (List<Resultado>) session.getAttribute("LISTARESULTADOG");
+		int valor  = 5;
+		session.setAttribute("VALOR", valor);
 		String classe = "normal";
 	%>
 
@@ -80,240 +82,28 @@ nav {
 	<div id="carouselSite" class="carousel slide" data-site="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-
-				<%
-					if (listaResultado != null && listaResultado.size() > 0) {
-				%>
-				<div class="container">
-					<table class="table table-striped">
-						<thead class="thead-dark">
-							<tr>
-								<th>Grupo</th>
-								<th>Nome</th>
-								<th>Vitoria</th>
-								<th>Empate</th>
-								<th>Derrota</th>
-								<th>Gols Marcados</th>
-								<th>Gols Sofridos</th>
-								<th>Saldo</th>
-								<th>Pontos</th>
-							</tr>
-						</thead>
-						<tbody>
-
-							<%
-								for (int i = 0; i < 5; i++) {
-										Resultado r = listaResultado.get(i);
-										if (r.isRebaixado()) {
-											classe = "rebaixado";
-										} else {
-											classe = "normal";
-										}
-							%>
-							<tr class="<%=classe%>">
-								<td><%=r.getGrupo()%></td>
-								<td><%=r.getNome()%></td>
-								<td><%=r.getVitorias()%></td>
-								<td><%=r.getEmpates()%></td>
-								<td><%=r.getDerrotas()%></td>
-								<td><%=r.getGols()%></td>
-								<td><%=r.getGolsSofridos()%></td>
-								<td><%=r.getSaldoGols()%></td>
-								<td><%=r.getPontos()%></td>
-
-
-
-							</tr>
-						</tbody>
-						<%
-							}
-						%>
-					</table>
-				</div>
-				<%
-					}
-					session.removeAttribute("LISTARESULTADOG");
-				%>
+				<jsp:include page="./tabelas.jsp"></jsp:include>
 				<div class="carousel-caption d-none d-md-block text-light">
 					<h3></h3>
 					<p></p>
 				</div>
 			</div>
 			<div class="carousel-item">
-
-				<%
-					if (listaResultado != null && listaResultado.size() > 0) {
-				%>
-				<div class="container">
-					<table class="table table-striped">
-						<thead class="thead-dark">
-							<tr>
-								<th>Grupo</th>
-								<th>Nome</th>
-								<th>Vitoria</th>
-								<th>Empate</th>
-								<th>Derrota</th>
-								<th>Gols Marcados</th>
-								<th>Gols Sofridos</th>
-								<th>Saldo</th>
-								<th>Pontos</th>
-							</tr>
-						</thead>
-						<tbody>
-
-							<%
-								for (int i = 5; i < 10; i++) {
-										Resultado r = listaResultado.get(i);
-										if (r.isRebaixado()) {
-											classe = "rebaixado";
-										} else {
-											classe = "normal";
-										}
-							%>
-							<tr class="<%=classe%>">
-								<td><%=r.getGrupo()%></td>
-								<td><%=r.getNome()%></td>
-								<td><%=r.getVitorias()%></td>
-								<td><%=r.getEmpates()%></td>
-								<td><%=r.getDerrotas()%></td>
-								<td><%=r.getGols()%></td>
-								<td><%=r.getGolsSofridos()%></td>
-								<td><%=r.getSaldoGols()%></td>
-								<td><%=r.getPontos()%></td>
-
-
-
-							</tr>
-						</tbody>
-						<%
-							}
-						%>
-					</table>
-				</div>
-				<%
-					}
-					session.removeAttribute("LISTARESULTADOG");
-				%>
+				<jsp:include page="./tabelas.jsp"></jsp:include>
 				<div class="carousel-caption d-none d-md-block text-light">
 					<h3></h3>
 					<p></p>
 				</div>
 			</div>
 			<div class="carousel-item">
-
-				<%
-					if (listaResultado != null && listaResultado.size() > 0) {
-				%>
-				<div class="container">
-					<table class="table table-striped">
-						<thead class="thead-dark">
-							<tr>
-								<th>Grupo</th>
-								<th>Nome</th>
-								<th>Vitoria</th>
-								<th>Empate</th>
-								<th>Derrota</th>
-								<th>Gols Marcados</th>
-								<th>Gols Sofridos</th>
-								<th>Saldo</th>
-								<th>Pontos</th>
-							</tr>
-						</thead>
-						<tbody>
-
-							<%
-								for (int i = 10; i < 15; i++) {
-										Resultado r = listaResultado.get(i);
-										if (r.isRebaixado()) {
-											classe = "rebaixado";
-										} else {
-											classe = "normal";
-										}
-							%>
-							<tr class="<%=classe%>">
-								<td><%=r.getGrupo()%></td>
-								<td><%=r.getNome()%></td>
-								<td><%=r.getVitorias()%></td>
-								<td><%=r.getEmpates()%></td>
-								<td><%=r.getDerrotas()%></td>
-								<td><%=r.getGols()%></td>
-								<td><%=r.getGolsSofridos()%></td>
-								<td><%=r.getSaldoGols()%></td>
-								<td><%=r.getPontos()%></td>
-
-
-
-							</tr>
-						</tbody>
-						<%
-							}
-						%>
-					</table>
-				</div>
-				<%
-					}
-					session.removeAttribute("LISTARESULTADOG");
-				%>
+				<jsp:include page="./tabelas.jsp"></jsp:include>
 				<div class="carousel-caption d-none d-md-block text-light">
 					<h3></h3>
 					<p></p>
 				</div>
 			</div>
 			<div class="carousel-item">
-
-				<%
-					if (listaResultado != null && listaResultado.size() > 0) {
-				%>
-				<div class="container">
-					<table class="table table-striped">
-						<thead class="thead-dark">
-							<tr>
-								<th>Grupo</th>
-								<th>Nome</th>
-								<th>Vitoria</th>
-								<th>Empate</th>
-								<th>Derrota</th>
-								<th>Gols Marcados</th>
-								<th>Gols Sofridos</th>
-								<th>Saldo</th>
-								<th>Pontos</th>
-							</tr>
-						</thead>
-						<tbody>
-
-							<%
-								for (int i = 15; i < 20; i++) {
-										Resultado r = listaResultado.get(i);
-										if (r.isRebaixado()) {
-											classe = "rebaixado";
-										} else {
-											classe = "normal";
-										}
-							%>
-							<tr class="<%=classe%>">
-								<td><%=r.getGrupo()%></td>
-								<td><%=r.getNome()%></td>
-								<td><%=r.getVitorias()%></td>
-								<td><%=r.getEmpates()%></td>
-								<td><%=r.getDerrotas()%></td>
-								<td><%=r.getGols()%></td>
-								<td><%=r.getGolsSofridos()%></td>
-								<td><%=r.getSaldoGols()%></td>
-								<td><%=r.getPontos()%></td>
-
-
-
-							</tr>
-						</tbody>
-						<%
-							}
-						%>
-					</table>
-				</div>
-				<%
-					}
-					session.removeAttribute("LISTARESULTADOG");
-				%>
+				<jsp:include page="./tabelas.jsp"></jsp:include>
 				<div class="carousel-caption d-none d-md-block text-light">
 					<h3></h3>
 					<p></p>
@@ -328,10 +118,8 @@ nav {
 	<a class="carousel-control-next" href="#carouselSite" role="button"
 		data-slide="next"> <span class="carousel-control-next-icon"></span>
 		<span class="sr-only">Proximo</span>
-
 	</a>
-
-
+	<% session.removeAttribute("LISTARESULTADOG"); %>
 
 	<form action="./pegarResultadosGrupos" method="post">
 		<button type="submit" name="s" value="gerar" class="btn btn-primary"

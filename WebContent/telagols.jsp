@@ -160,7 +160,7 @@ h1 {
 	<script type="text/javascript">
 		function preencheGols() {
 			var URL = "http://localhost:8080/Lab-Banco-AV1/gerarGols";
-
+			console.log("passei aqui");
 			function callBack(resposta, status) {
 				location.reload();
 			}
