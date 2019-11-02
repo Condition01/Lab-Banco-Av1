@@ -10,6 +10,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 <title>Resultados</title>
 <link rel="stylesheet"
 	href="node_modules/bootstrap/compiler/bootstrap.css">
@@ -36,21 +39,24 @@ nav {
 #carouselSite {
 	z-index: -1;
 }
+
+nav {
+	background-color: #f2cb12;
+}
 </style>
 </head>
 <body>
 	<%
 		List<Resultado> listaResultado = (List<Resultado>) session.getAttribute("LISTARESULTADOG");
-		int valor  = 5;
+		int valor = 5;
 		session.setAttribute("VALOR", valor);
 		String classe = "normal";
 	%>
-
-	<nav
-		class="navbar navbar-expand-lg navbar-light    bg-gradient-warning">
-		<div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="container" id="nav1">
 			<!-- nome em destaque no navbar -->
-			<a class="navbar-brand" href="a">FUTEBOL</a>
+			<a class="navbar-brand" href="./principal.html"><img alt=""
+				src="images/PAULISTA.png"></a>
 
 			<!-- reconher o navbar -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -119,7 +125,9 @@ nav {
 		data-slide="next"> <span class="carousel-control-next-icon"></span>
 		<span class="sr-only">Proximo</span>
 	</a>
-	<% session.removeAttribute("LISTARESULTADOG"); %>
+	<%
+		session.removeAttribute("LISTARESULTADOG");
+	%>
 
 	<form action="./pegarResultadosGrupos" method="post">
 		<button type="submit" name="s" value="gerar" class="btn btn-primary"

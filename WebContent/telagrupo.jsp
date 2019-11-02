@@ -10,6 +10,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 <title>Gerar Grupos</title>
 <link rel="stylesheet"
 	href="node_modules/bootstrap/compiler/bootstrap.css">
@@ -24,39 +27,43 @@ form {
 	text-align: center;
 	margin-bottom: 20px;
 }
+nav {
+	background-color: #f2cb12;
+}
 </style>
 </head>
 <body>
-	<nav
-		class="navbar navbar-expand-lg navbar-light    bg-gradient-warning">
-		<div class="container">
-			<!-- nome em destaque no navbar -->
-			<a class="navbar-brand" href="a">FUTEBOL</a>
+		<nav
+			class="navbar navbar-expand-lg navbar-light">
+			<div class="container" id="nav1">
+				<!-- nome em destaque no navbar -->
+				<a class="navbar-brand" href="./principal.html"><img alt="" src="images/PAULISTA.png"></a>
 
-			<!-- reconher o navbar -->
-			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarSite">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSite">
-				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="principal.html">Inicio</a></li>
-					<li class="nav-item"><a class="nav-link" href="telajogos.jsp">Sortear
-							Jogos</a></li>
-					<li class="nav-item"><a class="nav-link" href="telagrupo.jsp">Sortear
-							Grupos</a></li>
-					<li class="nav-item"><a class="nav-link" href="telagols.jsp">Gerar
-							Gols</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="telaresultados.jsp">Resultados</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="telargrupos.jsp">Resultados Grupo</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="telafinalistas.jsp">Finalistas!</a></li>
-				</ul>
+				<!-- reconher o navbar -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSite">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSite">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link"
+							href="principal.html">Inicio</a></li>
+						<li class="nav-item"><a class="nav-link" href="telajogos.jsp">Sortear
+								Jogos</a></li>
+						<li class="nav-item"><a class="nav-link" href="telagrupo.jsp">Sortear
+								Grupos</a></li>
+						<li class="nav-item"><a class="nav-link" href="telagols.jsp">Gerar
+								Gols</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="telaresultados.jsp">Resultados</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="telargrupos.jsp">Resultados Grupo</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="telafinalistas.jsp">Finalistas!</a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
-	</nav>
+		</nav>
 	<h1>Clique no Botao para gerar os Grupos</h1>
 	<br />
 	<%

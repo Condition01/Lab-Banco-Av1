@@ -5,6 +5,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 <title>Insert title here</title>
 <link rel="stylesheet"
 	href="node_modules/bootstrap/compiler/bootstrap.css">
@@ -19,15 +22,18 @@ h1 {
 	text-align: center;
 	margin-top: 20px;
 }
+
+nav {
+	background-color: #f2cb12;
+}
 </style>
 </head>
 <body>
-	<nav
-		class="navbar navbar-expand-lg navbar-light    bg-gradient-warning">
-		<div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="container" id="nav1">
 			<!-- nome em destaque no navbar -->
-			<a class="navbar-brand" href="a">Curso</a>
-
+			<a class="navbar-brand" href="./principal.html"><img alt=""
+				src="images/PAULISTA.png"></a>
 			<!-- reconher o navbar -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarSite">
