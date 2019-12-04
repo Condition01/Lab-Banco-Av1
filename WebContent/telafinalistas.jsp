@@ -74,7 +74,7 @@ nav {
 
 	<form action="./pegarFinalista" method="post">
 		<button type="submit" name="s" value="gerar" class="btn btn-primary"
-			style="width: 300px">Gerar Grupos</button>
+			style="width: 300px">Gerar Finalistas!</button>
 	</form>
 
 	<%
